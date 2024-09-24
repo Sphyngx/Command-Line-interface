@@ -11,7 +11,7 @@ void StartScreen()
 {
     Console.Clear();
     Console.ForegroundColor = ConsoleColor.Magenta;
-    Console.WriteLine("");
+    Console.SetCursorPosition(0, 2);
     Console.WriteLine(" ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
     Console.WriteLine(" ┃                                                      ┃");
     Console.WriteLine(" ┃  _____     _                  _____ _ _         _    ┃");
@@ -32,6 +32,9 @@ void StartScreen()
     Console.WriteLine(" ┃                         ┃");
     Console.WriteLine(" ┃                         ┃");
     Console.WriteLine(" ┃3.        Login          ┃");
+    Console.WriteLine(" ┃                         ┃");
+    Console.WriteLine(" ┃                         ┃");
+    Console.WriteLine(" ┃4.         Quit          ┃");
     Console.WriteLine(" ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛");
     string Input = Console.ReadLine();
     //Input Responses
@@ -50,13 +53,16 @@ void StartScreen()
         Console.Clear();
         Console.ReadLine();
     }
+    else if (Input == "4")
+    {
+        Console.Clear();
+        Console.ReadLine();
+        quit = true;
+    }
     else
     {
         NullInput();
     }
-
-
-
 }
 void NullInput()
 {
